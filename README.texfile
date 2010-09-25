@@ -1,0 +1,5 @@
+h1. My Rails 3 Application Template
+
+h2. How to use
+
+bc. rails new APPLICATION_NAME -m http://github.com/wilkerlucio/rails3_template/raw/master/all.rb
