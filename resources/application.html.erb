@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nome da Empresa</title>
+	<%= include_stylesheets :workspace %>
+	
+  <%= csrf_meta_tag %>
+
+</head>
+<body>
+
+	<div id="pagina">	
+		<div id="topo">
+			<div id="placeBar">
+				
+				<div id="menu">
+					<ul class="sf-menu"> 
+						<li class="current"> 
+							<a href="#a" class="menu">Menu</a> 
+							<ul> 
+								<li> 
+									<a href="#">Menu item 1</a> 
+								</li> 
+								<li class="current">
+									<a href="#">Menu item 2</a>
+								</li> 
+								<li> 
+									<a href="#">Sair</a> 
+								</li> 
+							</ul> 
+						</li>
+					</ul>
+				</div>
+			
+				<div id="user_nav">
+					<% if logged_in? %>
+					Bem vindo, <strong><%= current_user.nome %></strong>!
+					<% end %>
+					&nbsp;&nbsp;[&nbsp;<a href="<%= logout_path %>">Sair</a>&nbsp;]
+				</div>
+			</div>
+		</div>
+		
+		<div id="conteudo">
+			<%= yield %>
+		</div>		
+ 		
+		<div id="stick"></div>
+	</div>
+
+	<%= render 'footer' %>
+
+	<%= include_javascripts :workspace %>
+
+	<script type="text/javascript">
+		$("input.date").mask("99/99/9999",{placeholder:" "});
+		$("input.zipcode").mask("99999-999",{placeholder:" "});
+		$("input.phone").mask("(99) 9999-9999",{placeholder:" "});
+		$("input.decimal").maskMoney({symbol:"R$", decimal:",", thousands:"."});
+		$('ul.sf-menu').superfish();
+
+		<%= yield :js %>
+	</script>	
+</body>
+</html>

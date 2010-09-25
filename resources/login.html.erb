@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nome da Empresa</title>
+  <%= stylesheet_link_tag 'insidecode', 'redmond/jquery-ui-1.8.4.custom.css'%>
+	
+	<%= javascript_include_tag 'jquery', 'rails', 'jquery-ui-1.8.4'%>
+
+  <%= csrf_meta_tag %>
+
+</head>
+<body>
+
+	<div id="pagina">	
+		
+		<div id="conteudo">
+			<%= yield %>
+		</div>		
+		
+		<div id="stick"></div>
+		
+	</div>
+
+	<%= render 'footer' %>
+	
+</body>
+</html>
