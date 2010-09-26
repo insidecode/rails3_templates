@@ -2,4 +2,4 @@ h1. Inside Code Rails 3 Application Template
 
 h2. How to use
 
-bc. rails new APPLICATION_NAME -m http://github.com/insidecode/rails3_template/raw/master/all.rb
+bc. rails new APPLICATION_NAME -m http://github.com/insidecode/rails3_templates/raw/master/all.rb
