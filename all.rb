@@ -23,6 +23,10 @@ scripts << "jquery"
 # deploy
 scripts << "capistrano"
 
+# plugins
+scripts << "authentication"
+scripts << "flexigrid"
+
 # bundler
 scripts << "bundler"
 
