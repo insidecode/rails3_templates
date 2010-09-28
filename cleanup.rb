@@ -30,11 +30,5 @@ inject_into_file "config/application.rb", :after => "config.autoload_paths += %W
   "    config.autoload_paths += %W(\#{config.root}/lib)\n"
 end
 
-# apply default application layout
-get "#{File.dirname(__FILE__)}/resources/application.html.erb", "app/views/layouts/application.html.erb", :force => true
-get "#{File.dirname(__FILE__)}/resources/login.html.erb", "app/views/layouts/login.html.erb", :force => true
-get "#{File.dirname(__FILE__)}/resources/_footer.html.erb", "app/views/layouts/_footer.html.erb", :force => true
-#get "#{File.dirname(__FILE__)}/resources/stylesheets/*", "public/stylesheets/", :force => true
-
 # rails 3 generators gem
 #gem 'rails3-generators', '0.13.0'

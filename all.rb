@@ -6,6 +6,9 @@ scripts = []
 # clean up for start
 scripts << "cleanup"
 
+#rvm
+scritps << "rvm"
+
 # testing setup
 scripts << "rspec"
 
@@ -26,6 +29,9 @@ scripts << "capistrano"
 # plugins
 scripts << "authentication"
 scripts << "flexigrid"
+
+#layout
+scripts << "layout"
 
 # bundler
 scripts << "bundler"

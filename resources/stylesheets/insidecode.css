@@ -1,9 +1,21 @@
+/* CSS reset **/
 * {
 	margin: 0;
-	padding: 0;
-	list-style: none;
-	vertical-align: baseline;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  background: transparent;
 }
+
+:focus {
+  outline: 0;
+}
+/* fim CSS reset **/
 
 html {
   background:#fff;
